@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build / distribution
+dist/
+build/
+.expo/
+web-build/
+
+# Prisma generated client
+backend/generated/prisma/
+
+# Expo generated files
+mobile/expo-env.d.ts
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Native generated folders
+mobile/ios/
+mobile/android/
+
+# Expo
+mobile/.expo/
+
+# AI / Agent tooling
+.agents/
+.claude/
+.cursor/
+.devin/
