@@ -4,6 +4,8 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import express from "express";
 import helmet from "helmet";
+import { startNotificationsJob } from "./jobs/notifications.job.js";
+import { startRecurringTransactionsJob } from "./jobs/recurring-transactions.job.js";
 
 import routes from "./routes/index.js";
 
@@ -26,6 +28,9 @@ app.use(cookieParser());
 
 app.use(routes);
 
+startRecurringTransactionsJob();
+startNotificationsJob();
+
 app.listen(PORT, () => {
-  console.log(`🚀 FinanceFlow API running on port ${PORT}`);
+  console.log(`🚀 FinanceFlow Servidor rodando na porta ${PORT}`);
 });

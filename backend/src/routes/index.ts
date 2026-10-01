@@ -9,6 +9,16 @@ import creditCardRoutes from "../modules/credit-cards/credit-card.routes.js";
 import invoiceRoutes from "../modules/invoices/invoice.routes.js";
 import purchaseRoutes from "../modules/credit-cards/purchase.routes.js";
 import budgetRoutes from "../modules/budgets/budget.routes.js";
+import goalRoutes from "../modules/goals/goal.routes.js";
+import recurringTransactionRoutes from "../modules/recurring-transactions/recurring-transaction.routes.js";
+import dashboardRoutes from "../modules/dashboard/dashboard.routes.js";
+import reportsRoutes from "../modules/reports/reports.routes.js";
+import insightsRoutes from "../modules/insights/insights.routes.js";
+import notificationsRoutes from "../modules/notifications/notifications.routes.js";
+import { auditRoutes } from "../modules/audit/audit.routes.js";
+import { investmentsRoutes } from "../modules/investments/investments.routes.js";
+import { settingsRoutes } from "../modules/settings/settings.routes.js";
+import { netWorthRoutes } from "../modules/net-worth/net-worth.routes.js";
 
 const router = Router();
 
@@ -30,5 +40,16 @@ router.use("/credit-cards", creditCardRoutes);
 router.use("/invoices", invoiceRoutes);
 router.use(purchaseRoutes);
 router.use(budgetRoutes);
+router.use("/goals", goalRoutes);
+router.use("/recurring-transactions",
+  recurringTransactionRoutes,);
+router.use("/dashboard", dashboardRoutes);
+router.use("/reports", reportsRoutes);
+router.use("/insights", insightsRoutes);
+router.use("/notifications", notificationsRoutes);
+router.use("/audit", auditRoutes);
+router.use("/investments", investmentsRoutes);
+router.use('/net-worth', netWorthRoutes);
+router.use('/settings', settingsRoutes);
 
 export default router;

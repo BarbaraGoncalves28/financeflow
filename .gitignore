@@ -48,3 +48,6 @@ mobile/.expo/
 .claude/
 .cursor/
 .devin/
+**/AGENTS.md
+**/CLAUDE.md
+**/GEMINI.md
